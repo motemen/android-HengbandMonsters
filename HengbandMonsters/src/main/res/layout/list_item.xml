@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingRight="6sp">
+    <TextView
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:text="9999"
+            android:id="@+id/textViewNumber" android:layout_gravity="center_vertical|right"
+            android:textAlignment="textEnd"
+        android:gravity="right"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    <TextView
+            android:layout_width="60sp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="A"
+            android:id="@+id/textViewSymbol" android:layout_gravity="center"
+            android:typeface="monospace"
+        android:gravity="center_horizontal" />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault"
+            android:text="Player"
+            android:id="@+id/textViewName" android:layout_gravity="center_vertical|left"/>
+</LinearLayout>
