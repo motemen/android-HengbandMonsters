@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -63,5 +65,24 @@ public class ListActivity extends Activity implements SimpleCursorAdapter.ViewBi
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("id", id);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_license:
+                Intent intent = new Intent(this, LicenseActivity.class);
+                startActivity(intent);
+                return true;
+        }
+
+        return false;
     }
 }

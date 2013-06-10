@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -42,16 +41,6 @@ public class MainActivity extends Activity {
         ((TextView)findViewById(R.id.textViewDescription)).setText(description);
         ((TextView)findViewById(R.id.textViewRecall)).setText(recall);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setTitle(name);
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
 }
